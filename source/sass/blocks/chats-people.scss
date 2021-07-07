@@ -1,0 +1,26 @@
+.chats-people__item {
+  display: flex;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.chats-people__item-title {
+  margin: 0;
+}
+
+.chats-people__item-text {
+  margin: 0;
+}
+
+.chats-people__item-avatar--online {
+  position: relative;
+}
+
+.chats-people__item-avatar--online::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  top: 40px;
+  left: 40px;
+  background-image: url("../img/Online.svg");
+}

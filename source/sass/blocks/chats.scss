@@ -1,0 +1,27 @@
+.chats {
+  border-right: 1px solid #e1e3e5;
+}
+
+.chats__search {
+  border-bottom: 1px solid #e1e3e5;
+  position: relative;
+}
+
+.chats__input {
+  padding: 10px;
+  padding-left: 30px;
+  border: 0;
+  outline: none;
+}
+
+.chats__search::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/search.svg");
+  top: 0;
+  left: 0;
+}
+
+
