@@ -1,5 +1,12 @@
 .main-menu {
-  background-color: #3a63de;
+  background-color: $total-blue;
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+
+.main-menu__logo {
+  padding-bottom: 31px;
 }
 
 .main-menu__link {
@@ -32,7 +39,7 @@
 .main-menu__item--notification::before {
   position: absolute;
   content: '4';
-  background-color: #fd726a;
+  background-color: $orange;
   color: #fff;
   padding-left: 5px;
   padding-right: 5px;
@@ -42,8 +49,13 @@
   left: 93px;
 }
 
+.main-menu__load-more {
+  align-self: center;
+  margin-top: -20px;
+}
+
 .main-menu__link--active {
-  background-color: #3a63de;
+  background-color: $total-blue;
   box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.08), inset 0px 4px 8px rgba(0, 0, 0, 0.08);
   background-color: rgba(#000, 0.15);
 }
@@ -53,4 +65,16 @@
   border: 0;
   outline: 0;
   cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .main-menu {
+    display: none;
+  }
+
+  .main-menu.active {
+    display: block;
+    position: fixed;
+    z-index: 10;
+  }
 }

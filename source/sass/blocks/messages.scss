@@ -1,13 +1,270 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $body-color;
+}
+
 .messages__header {
   border-bottom: 1px solid #e3e5e7;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  align-items: center;
+}
+
+.messages__header-title {
+  font-size: 15px;
+}
+
+.messages__header-picture {
+  margin-right: 15px;
+}
+
+.messages__container {
+  padding: 25px 28px;
+  justify-self: stretch;
+  margin-top: -12px;
+}
+
+.messages__header-container {
+  display: flex;
+}
+
+.messages__companion {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.messages__companion-text {
+  color: #fff;
+  padding: 20px 20px;
+  margin: 0;
+}
+
+.massages__header-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.messages__companion-avatar {
+  margin-right: 10px;
+}
+
+.messages__my-avatar {
+  margin-left: 10px;
+  order: 1;
 }
 
 .messages__companion-message {
-  background-color: #3a63de;
+  background-color: $total-blue;
   border-radius: 8px 8px 8px 1px;
+  position: relative;
+}
+
+.messages__companion-message:after {
+  position: absolute;
+  content: '1 day ago';
+  bottom: -20px;
+  right: -120px;
+  width: 200px;
+  height: 20px;
+}
+
+.messages__companion-message img {
+  display: inline;
 }
 
 .messages__my {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 43px;
+  margin-bottom: 17px;
+}
+
+.messages__my-message {
   background-color: #f2f5fa;
   border-radius: 8px 8px 1px 8px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.messages__my-message:after {
+  position: absolute;
+  content: '1 day ago';
+  bottom: -20px;
+  left: 0;
+  width: 200px;
+  height: 20px;
+}
+
+.messages__my-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-top: -10px;
+}
+
+.messages__type-message {
+  border-top: 1px solid #e3e5e7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.messages__buttons {
+  width: 70px;
+  display: flex;
+}
+
+.messages__send-button {
+  width: 56px;
+  height: 56px;
+  background-color: $total-blue;
+  border: none;
+  cursor: pointer;
+}
+
+.messages__attachment-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.messages__smiles-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.massage__input-message {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.massage__input-message::placeholder {
+  font-size: 15px;
+}
+
+.messages__load-more {
+  color: $total-blue;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 18px;
+  background-color: #f2f5fa;
+  border: none;
+  height: 48px;
+}
+
+.messages__attachments {
+  display: flex;
+  width: 313px;
+  justify-content: space-between;
+  margin-top: 7px;
+  margin-right: 60px;
+  align-items: center;
+}
+
+.messages__attachments-img {
+  width: 72px;
+}
+
+.messages__companion-send {
+  border-radius: 8px 8px 8px 1px;
+  background-color: rgba($total-blue, 0.1);
+  position: relative;
+}
+
+.messages__download-file {
+  padding: 20px 20px;
+  color: #333;
+  font-size: 15px;
+}
+
+.messages__download-name {
+  background-color: $total-blue;
+  padding: 12px 14px;
+  color: #fff;
+  position: relative;
+}
+
+.messages__download-name::before {
+  position: absolute;
+  content: '';
+  top: 20px;
+  left: 205px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/download.svg");
+}
+
+.messages__download-kb {
+  text-transform: uppercase;
+  color: $total-blue;
+  margin: 0;
+}
+
+.messages__companion-send {
+  border-radius: 8px 8px 8px 1px;
+  width: 258px;
+  position: relative;
+}
+
+.messages__companion-send:after {
+  position: absolute;
+  content: '1 day ago';
+  bottom: -20px;
+  right: -120px;
+  width: 200px;
+  height: 20px;
+}
+
+.messages__my-editing {
+  background-color: transparent;
+  border: none;
+  align-self: center;
+}
+
+.messages__companion-editing {
+  background-color: transparent;
+  border: none;
+  align-self: center;
+}
+
+.messages__my-time {
+  align-self: center;
+}
+
+.massages__date {
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.massages__date span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.massages__date:before,
+.massages__date:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 1px;
+  background-color: #e1e3e6;
+  position: relative;
+}
+.massages__date:before {
+  margin-left: -100%;
+  left: -14px;
+}
+.massages__date:after {
+  margin-right: -100%;
+  right: -14px;
 }

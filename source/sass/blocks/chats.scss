@@ -1,17 +1,24 @@
 .chats {
   border-right: 1px solid #e1e3e5;
+  background-color: $body-color;
 }
 
 .chats__search {
   border-bottom: 1px solid #e1e3e5;
   position: relative;
+  padding: 23px 30px;
+  box-sizing: border-box;
+}
+
+.chats__input::placeholder {
+  font-size: 15px;
 }
 
 .chats__input {
-  padding: 10px;
-  padding-left: 30px;
+  padding: 10px 10px 10px 20px;
   border: 0;
   outline: none;
+  width: 300px;
 }
 
 .chats__search::before {
@@ -20,8 +27,18 @@
   width: 22px;
   height: 22px;
   background-image: url("../img/search.svg");
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: 21px;
 }
 
+@media (max-width: 1023px) {
+  .chats {
+    width: 380px;
+  }
+}
 
+@media (max-width: 768px) {
+  .chats {
+    display: none;
+  }
+}

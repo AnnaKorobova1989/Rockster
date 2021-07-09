@@ -1,14 +1,51 @@
+.chats-people__add {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chats-people__header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+  padding-left: 25px;
+  padding-right: 13px;
+}
+
+.chats-people__title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .chats-people__item {
   display: flex;
   border-bottom: 1px solid #e1e3e5;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 13px;
+  padding-bottom: 20px;
+}
+
+.chats-people__header {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .chats-people__item-title {
   margin: 0;
+  font-size: 15px;
 }
 
 .chats-people__item-text {
   margin: 0;
+}
+
+.chats-people__item-avatar {
+  margin-right: 14px;
 }
 
 .chats-people__item-avatar--online {
@@ -23,4 +60,21 @@
   top: 40px;
   left: 40px;
   background-image: url("../img/Online.svg");
+}
+
+.chats-people__item-content--notification {
+  position: relative;
+}
+
+.chats-people__item-content--notification::after {
+  position: absolute;
+  content: '4';
+  background-color: $orange;
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  top: 18px;
+  left: 246px;
 }
